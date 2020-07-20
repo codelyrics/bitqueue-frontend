@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>BitQueue Dashboard</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Jquery -->
+    <script src="jquery/jquery-3.5.1.min.js"></script>
+    <!--Custome CSS Files -->
+    <link href="custom/css/style.css" rel="stylesheet">
+    <script src="custom/js/index.js"> </script>
+    <!--Charts-->
+    <script src="charts/Chart.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar starts here -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navbar ends Here -->
+    <div class="container">
+        <div class="row infocardrow">
+            <div class="col">
+                <div class="card infocard">
+                    <div class="card-header bg-info">
+                        Registered Devices
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text number">1000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card infocard">
+                    <div class="card-header bg-success">
+                        Online Devices
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text number">900</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card infocard">
+                    <div class="card-header bg-danger">
+                        Faulted Devices
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text number">90</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card infocard">
+                    <div class="card-header bg-warning">
+                        Faulted Devices
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text number">10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row chartrow col-sm">
+            <div class="card col-sm" style="width: 50rem;">
+                <div class="card-header">
+                    DataDog
+                </div>
+                <div class="card-body">
+                    <canvas id="chart" width="400" height="200"> </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Complete container-->
+</body>
+
+</html>
