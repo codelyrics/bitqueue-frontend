@@ -1,0 +1,21 @@
+name: Action to release image to DHUB
+
+on: [release]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: action/checkout@v2
+      - name: Build and push Docker Image
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DHUB_USERNAME }}
+          password: ${{ secrets.DHUB_ACCESS_TOKEN }}
+          repository: codelyrics/bitqueue-frontend
+          tag_with_ref: true
+          push: ${{ startsWith(github.ref, 'refs/tags/') }}          
+          
+                
+
