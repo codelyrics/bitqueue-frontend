@@ -1,6 +1,5 @@
-FROM centos:latest
+FROM nginx:alpine
 MAINTAINER Parag Kamble
-RUN yum -y install httpd
-COPY webapp/* /var/www/html/
-CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
+COPY webapp /home/webapp/
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
