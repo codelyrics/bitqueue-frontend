@@ -6,7 +6,7 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1.0
+    - uses: actions/checkout@v0.2
       name: Check out code
 
     - uses: mr-smithers-excellent/docker-build-push@v4
