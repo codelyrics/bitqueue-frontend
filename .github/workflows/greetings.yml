@@ -1,0 +1,19 @@
+name: Build and Push Docker image
+
+on: [release]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1.0
+      name: Check out code
+
+    - uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: codelyrics/bitqueue-frontend
+        registry: docker.io
+        tag: latest
+        dockerfile: Dockerfile 
+        username: ${{ secrets.DHUB_USERNAME }}
+        password: ${{ secrets.DHUB_ACCESS_TOKEN }}
