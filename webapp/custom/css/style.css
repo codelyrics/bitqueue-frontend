@@ -80,7 +80,7 @@ body{
     border-color: #fff;
   }
   .username, .password {
-    border: none;
+    border: 1px saddlebrown;
     border-radius: 0;
     box-shadow: none;
     border-bottom: 2px solid #eee;
