@@ -38,4 +38,16 @@ $(document).ready(function() {
             }
         }
     });
+
+    // Login button onclick event.
+    $("#loginbtn").click(function(){
+        var arr = $('#username').val().split('/');
+        var org = arr[0];
+        var username = arr[1];
+        var password = $('#password').val();
+        $("#username").val('');
+        $("#password").val('');
+        $('#login').modal('toggle');
+    });
+
 });
